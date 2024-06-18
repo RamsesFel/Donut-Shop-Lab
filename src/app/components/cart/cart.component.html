@@ -1,0 +1,11 @@
+<br>
+<h1>Cart:</h1>
+
+<ul>
+    @for (d of getCart(); track $index) {
+        <li>Item:{{d.name}} Calories: {{d.calories}} Price:$1<button (click)="removeFromCart(d)">X</button></li>
+    }
+</ul>
+<h2>Total Price: ${{this.totalPrice}}</h2>
+<h2>Total Calories: {{this.totalCalories}}</h2>
+<button (click)="resetCart()">Reset</button>
